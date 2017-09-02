@@ -6,14 +6,14 @@
     'description': """
         The goods management app can help the users the manage their goods via orders, bills, invoices and
         tracking of goods etc.
-     """,
+    """,
     'author': 'luckyshera',
     'website': 'http://www.luckyshera.com',
     'category': 'Uncategorized',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'templates.xml',
+        'gdm_view.xml',
     ],
     'demo': [
         'demo.xml',
