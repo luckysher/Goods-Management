@@ -22,6 +22,11 @@ class goods_supplier(osv.osv):
         'email': fields.char('Email', help='Email Id of supplier', select=True),
         'website': fields.char('Website', help='Supplier`s website', select=True),
         'mobile': fields.char('Mobile No', help='Supplier`s mobile number', select=True),
+        'fax': fields.char('Fax', help='Supplier`s Fax', select=True),
+        'title': fields.char('Title', help='', select=True),
+        'goods': fields.one2many('gdm.good', 'id', help='Add goods for supplier', copy=True),
+        'image': fields.binary("Image",
+                               help="This field holds the image used as image for the supplier, limited to 1024x1024px.")
 
       }
 
