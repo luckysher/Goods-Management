@@ -34,4 +34,9 @@ class customer(osv.osv):
     _name = 'gdm.customer'
     _table = 'gdm_customer'
     _description = 'customer'
+    _columns = {
+        'name': fields.many2one('res.users', help='Supplier that will supplier the goods', select=True, copy=False),
+        'address': fields.char('Supplier address',
+                               help='Supplier address from where goods, order will be received and send', select=True),
 
+    }
