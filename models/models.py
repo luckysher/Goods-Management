@@ -30,3 +30,8 @@ class goods_supplier(osv.osv):
 
       }
 
+class customer(osv.osv):
+    _name = 'gdm.customer'
+    _table = 'gdm_customer'
+    _description = 'customer'
+
