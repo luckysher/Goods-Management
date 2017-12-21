@@ -11,12 +11,13 @@ class good(osv.osv):
         'mf_date': fields.date('Manufacturing date', help="Manufatring date of this good")
     }
 
+
 class goods_supplier(osv.osv):
     _name = 'gdm.supplier'
     _table = 'gdm_supplier'
     _description = 'Goods suppliers'
     _columns = {
-        'name': fields.many2one('res.users', help='Supplier that will supplier the goods', select=True, copy=False),
+        'name': fields.many2one('res.users', 'Name', help='Supplier that will supplier the goods', select=True, copy=False),
         'address': fields.char('Supplier address', help='Supplier address from where goods, order will be received and send', select=True),
         'company_name': fields.char('Company name', help='Supplier`s company name', select=True),
         'email': fields.char('Email', help='Email Id of supplier', select=True),
@@ -30,6 +31,7 @@ class goods_supplier(osv.osv):
 
       }
 
+
 class customer(osv.osv):
     _name = 'gdm.customer'
     _table = 'gdm_customer'
@@ -38,5 +40,5 @@ class customer(osv.osv):
         'name': fields.many2one('res.users', help='Supplier that will supplier the goods', select=True, copy=False),
         'address': fields.char('Supplier address',
                                help='Supplier address from where goods, order will be received and send', select=True),
-
+        'ordered_quantity': fields.char('Ordered quantity', help='', select=True)
     }
