@@ -40,5 +40,6 @@ class customer(osv.osv):
         'name': fields.many2one('res.users', help='Supplier that will supplier the goods', select=True, copy=False),
         'address': fields.char('Supplier address',
                                help='Supplier address from where goods, order will be received and send', select=True),
-        'ordered_quantity': fields.char('Ordered quantity', help='', select=True)
+        'ordered_quantity': fields.char('Ordered quantity', help='', select=True),
+        'type': fields.char('Order Type', help='', select=True)
     }
