@@ -17,12 +17,16 @@ class goods_supplier(osv.osv):
     _table = 'gdm_supplier'
     _description = 'Goods suppliers'
     _columns = {
-        'name': fields.many2one('res.users', 'Name', help='Supplier that will supplier the goods', select=True, copy=False),
-        'address': fields.char('Supplier address', help='Supplier address from where goods, order will be received and send', select=True),
+        'name': fields.char('Name', help='Supplier that will supplier the goods', select=True, copy=False),
+        'city': fields.char('City', help='Supplier city', select=True),
+        'state': fields.char('State', help='Supplier state', select=True),
+        'zip': fields.integer('Zip code', help='Supplier zip', select=True),
         'company_name': fields.char('Company name', help='Supplier`s company name', select=True),
         'email': fields.char('Email', help='Email Id of supplier', select=True),
         'website': fields.char('Website', help='Supplier`s website', select=True),
+        'jobPosition': fields.char('Job Position', help='Jon position', select=True),
         'mobile': fields.char('Mobile No', help='Supplier`s mobile number', select=True),
+        'phone': fields.char('Phone', help='Supplier`s phone number', select=True),
         'fax': fields.char('Fax', help='Supplier`s Fax', select=True),
         'title': fields.char('Title', help='', select=True),
         'goods': fields.one2many('gdm.good', 'id', help='Add goods for supplier', copy=True),
