@@ -20,6 +20,7 @@ class goods_supplier(osv.osv):
         'name': fields.char('Name', help='Supplier that will supplier the goods', select=True, copy=False),
         'city': fields.char('City', help='Supplier city', select=True),
         'state': fields.char('State', help='Supplier state', select=True),
+        'country': fields.char('Country', help='Supplier country', select=True),
         'zip': fields.integer('Zip code', help='Supplier zip', select=True),
         'company_name': fields.char('Company name', help='Supplier`s company name', select=True),
         'email': fields.char('Email', help='Email Id of supplier', select=True),
