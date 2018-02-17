@@ -7,7 +7,13 @@
                 <tree String="Supplier">
                     <field name="name"/>
                     <field name="city"/>
-
+                    <field name="state"/>
+                    <field name="country"/>
+                    <field name="zip"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="mobile"/>
+                    <field name="website"/>
                 </tree>
             </record>
     </data>
