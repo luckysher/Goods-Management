@@ -24,7 +24,8 @@
              <record model="ir.ui.view" id="supplier_form_view">
                 <field name="name">gdm.supplier.form</field>
                 <field name="model">gdm.supplier</field>
-
+                <field name="type">form</field>
+                <field name="arch" type="xml"/>
                 <tree String="Supplier">
                     <field name="name"/>
                     <field name="city"/>
