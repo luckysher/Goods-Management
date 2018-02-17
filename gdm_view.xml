@@ -43,7 +43,10 @@
                 <field name="name">Supplier</field>
                 <field name="res_model">gdm.supplier</field>
             </record>
-
+            <record model="ir.actions.act_window" action="action_supplier_tree">
+                <field name="name">Product</field>
+                <field name="res_model">gdm.supplier</field>
+            </record>
             <menuitem name="Goods Management" id="gdm_menu"/>
             <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
             <menuitem name="Supplier" parent="spl_group" id="splr_menu" action="action_supplier_form"/>
