@@ -25,6 +25,12 @@
                 <field name="name">gdm.supplier.form</field>
                 <field name="model">gdm.supplier</field>
 
+                <tree String="Supplier">
+                    <field name="name"/>
+                    <field name="city"/>
+                    <field name="state"/>
+                    <field name="country"/>
+                    <field name="zip"/>
 
                 </tree>
             </record>
