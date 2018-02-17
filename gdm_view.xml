@@ -39,7 +39,10 @@
                 </tree>
             </record>
             <!-- Supplier form view end -->
-
+            <record model="ir.actions.act_window" action="action_supplier_form">
+                <field name="name">Supplier</field>
+                <field name="res_model">gdm.supplier</field>
+            </record>
 
             <menuitem name="Goods Management" id="gdm_menu"/>
             <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
