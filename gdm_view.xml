@@ -1,5 +1,14 @@
 <openerp>
     <data>
+        <record model="ir.ui.view" id="supplier_tree_view">
+                <field name="name">gdm.supplier.tree</field>
+                <field name="model">gdm.supplier</field>
+                <field name="arch" type="xml"/>
+                <tree String="Supplier">
+                    <field name="name"/>
+                    <field name="city"/>
 
+                </tree>
+            </record>
     </data>
 </openerp>
