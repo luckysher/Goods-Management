@@ -32,7 +32,10 @@
                     <field name="state"/>
                     <field name="country"/>
                     <field name="zip"/>
-
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="mobile"/>
+                    <field name="website"/>
                 </tree>
             </record>
             <!-- Supplier form view end -->
