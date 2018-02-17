@@ -1,5 +1,6 @@
 <openerp>
     <data>
+        <!-- Supplier tree view start -->
         <record model="ir.ui.view" id="supplier_tree_view">
                 <field name="name">gdm.supplier.tree</field>
                 <field name="model">gdm.supplier</field>
@@ -17,5 +18,14 @@
                     <field name="website"/>
                 </tree>
             </record>
+            <!-- Supplier tree view end -->
+
+
+            <menuitem name="Goods Management" id="gdm_menu"/>
+            <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
+            <menuitem name="Supplier" parent="spl_group" id="splr_menu" action="action_supplier_form"/>
+            <menuitem name="Products" parent="gdm_menu" id="pdts_menu"/>
+            <menuitem name="Product" parent="pdts_menu" id="pdt_menu" action="action_supplier_tree"/>
+
     </data>
 </openerp>
