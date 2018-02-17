@@ -20,6 +20,16 @@
             </record>
             <!-- Supplier tree view end -->
 
+             <!-- Supplier form view start -->
+             <record model="ir.ui.view" id="supplier_form_view">
+                <field name="name">gdm.supplier.form</field>
+                <field name="model">gdm.supplier</field>
+
+
+                </tree>
+            </record>
+            <!-- Supplier form view end -->
+
 
             <menuitem name="Goods Management" id="gdm_menu"/>
             <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
