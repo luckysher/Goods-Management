@@ -106,7 +106,14 @@
             <field name="model">gdm.supplier</field>
             <field name="type">kanban</field>
             <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="email"/>
 
+                    <templates>
+
+                    </templates>
+                </kanban>
             </field>
         </record>
     </data>
