@@ -53,10 +53,14 @@
                             <page string="Company Details">
                                 <group colspan="4">
                                     <group>
-                                         <field name="company_name"/>
-                                         <field name="website"/>
-                                         <field name="website"/>
-                                         <field name="website"/>
+                                        <field name="company_name"/>
+                                        <field name="jobPosition" placaholder="Actual position in the company.."/>
+                                    </group>
+                                    <separator string="Other details"/>
+                                    <group>
+                                        <field name="fax"/>
+                                        <field name="phone"/>
+                                        <field name="mobile"/>
                                     </group>
                                 </group>
                             </page>
