@@ -74,23 +74,23 @@
         <record model="ir.actions.act_window" id="action_supplier_form">
             <field name="name">Supplier</field>
             <field name="res_model">gdm.supplier</field>
-             <field name="help" type="html">
-              <p class="oe_view_nocontent_create">
-                Click to define a new Supplier.
-              </p><p>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new Supplier.
+                </p><p>
                 You must define a Supplier for everything.
-              </p>
+            </p>
             </field>
         </record>
         <record model="ir.actions.act_window" id="action_supplier_tree">
             <field name="name">Product</field>
             <field name="res_model">gdm.supplier</field>
-             <field name="help" type="html">
-              <p class="oe_view_nocontent_create">
-                Click to define a new Supplier.
-              </p><p>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new Supplier.
+                </p><p>
                 You must define a Supplier for everything.
-              </p>
+            </p>
             </field>
         </record>
         <menuitem name="Goods Management" id="gdm_menu"/>
@@ -101,6 +101,13 @@
                   action="action_supplier_form"/>
         <menuitem name="Products" parent="gdm_menu" id="pdts_menu"/>
         <menuitem name="Product" parent="pdts_menu" id="pdt_menu" action="action_supplier_tree"/>
+        <record model="ir.ui.view" id="supplier_kanban_view">
+            <field name="name">gdm.supplier.kanban</field>
+            <field name="model">gdm.supplier</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
 
+            </field>
+        </record>
     </data>
 </openerp>
