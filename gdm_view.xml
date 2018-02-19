@@ -116,7 +116,7 @@
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_vignette oe_semantic_html_override">
-                                <a type="open"><img t-att-src="kanban_image('goods.supplier', 'image', record.id.value)" class="oe_kanban_image"/></a>
+                                <a type="open"><img t-att-src="kanban_image('gdm.supplier', 'image', record.id.value)" class="oe_kanban_image"/></a>
                                 <div class="oe_kanban_details">
                                     <h4>
                                         <a type="open">
@@ -135,6 +135,15 @@
                     </templates>
                 </kanban>
             </field>
+        </record>
+          <record id="supplier_address_action" model="ir.actions.act_window">
+            <field name="name">Supplier</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gdm.supplier</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="gdm_supplier_kanban_view"/>
+            <field name="context">{}</field>
         </record>
     </data>
 </openerp>
