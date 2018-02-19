@@ -109,7 +109,9 @@
                 <kanban>
                     <field name="name"/>
                     <field name="email"/>
-
+                    <field name="phone"/>
+                    <field name="mobile"/>
+                    <field name="website"/>
                     <templates>
 
                     </templates>
