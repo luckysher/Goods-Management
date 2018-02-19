@@ -122,7 +122,13 @@
                                         <a type="open">
                                             <span t-if="record.zip.value">
                                                 [<field name="zip"/>]
-
+                                            </span>
+                                            <field name="name"/>
+                                        </a>
+                                    </h4>
+                                    <a name="%(product.supplier_address_action)d" type="action">
+                                        Address:<t t-esc="record.city.value, record.city.state, record.country.value"/>
+                                    </a>
                                 </div>
                             </div>
                         </t>
