@@ -30,6 +30,18 @@
                 <form string="Supplier">
                     <sheet>
 
+                        <notebook>
+                            <page string="Address">
+                                <group colspan="4">
+                                    <group>
+                                        <field name="city"/>
+                                        <field name="state"/>
+                                        <field name="country"/>
+
+                                        <field name="mobile"/>
+                                    </group>
+                                </group>
+                            </page>
                             <page string="Company Details">
                                 <group colspan="4">
                                     <group>
