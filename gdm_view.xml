@@ -80,7 +80,11 @@
                     <field name="email"/>
                     <field name="phone"/>
                     <field name="mobile"/>
-
+                    <field name="zip"/>
+                    <field name="website"/>
+                    <field name="city"/>
+                    <field name="state"/>
+                    <field name="country"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_vignette oe_semantic_html_override">
@@ -109,7 +113,8 @@
         <record model="ir.actions.act_window" id="action_supplier_form">
             <field name="name">Supplier</field>
             <field name="res_model">gdm.supplier</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="supplier_kanban_view"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new Supplier.
@@ -121,7 +126,7 @@
         <record model="ir.actions.act_window" id="action_supplier_tree">
             <field name="name">Product</field>
             <field name="res_model">gdm.supplier</field>
-            <field name="view_mode">tree,form, kanban</field>
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new Supplier.
