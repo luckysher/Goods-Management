@@ -85,7 +85,13 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_vignette oe_semantic_html_override">
                                 <a type="open"><img t-att-src="kanban_image('gdm.supplier', 'image', record.id.value)" class="oe_kanban_image"/></a>
+                                <div class="oe_kanban_details">
 
+                                    <a name="gdm.supplier.supplier_address_action" type="action">
+                                        Address:<t t-esc="record.city.value, record.state.value, record.country.value"/>
+                                    </a>
+                                    <div name="tags"/>
+                                </div>
                             </div>
                         </t>
                     </templates>
