@@ -70,10 +70,31 @@
                 </form>
             </field>
         </record>
+        <record model="ir.ui.view" id="supplier_kanban_view">
+            <field name="name">gdm.supplier.supplier.kanban</field>
+            <field name="model">gdm.supplier</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="mobile"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_vignette oe_semantic_html_override">
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
         <!-- Supplier form view end -->
         <record model="ir.actions.act_window" id="action_supplier_form">
-            <field name="name">Supplier</field>
-            <field name="res_model">gdm.supplier</field>
+
+            <field name="view_id" ref="supplier_kanban_view"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new Supplier.
@@ -85,6 +106,7 @@
         <record model="ir.actions.act_window" id="action_supplier_tree">
             <field name="name">Product</field>
             <field name="res_model">gdm.supplier</field>
+            <field name="view_mode">tree,form, kanban</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new Supplier.
@@ -101,49 +123,5 @@
                   action="action_supplier_form"/>
         <menuitem name="Products" parent="gdm_menu" id="pdts_menu"/>
         <menuitem name="Product" parent="pdts_menu" id="pdt_menu" action="action_supplier_tree"/>
-        <record model="ir.ui.view" id="supplier_kanban_view">
-            <field name="name">gdm.supplier.kanban</field>
-            <field name="model">gdm.supplier</field>
-            <field name="type">kanban</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <field name="name"/>
-                    <field name="email"/>
-                    <field name="phone"/>
-                    <field name="mobile"/>
-                    <field name="zip"/>
-                    <field name="website"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div class="oe_kanban_vignette oe_semantic_html_override">
-                                <a type="open"><img t-att-src="kanban_image('gdm.supplier', 'image', record.id.value)" class="oe_kanban_image"/></a>
-                                <div class="oe_kanban_details">
-                                    <h4>
-                                        <a type="open">
-                                            <span t-if="record.zip.value">
-                                                [<field name="zip"/>]
-                                            </span>
-                                            <field name="name"/>
-                                        </a>
-                                    </h4>
-                                    <a name="%(product.supplier_address_action)d" type="action">
-                                        Address:<t t-esc="record.city.value, record.city.state, record.country.value"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-          <record id="supplier_address_action" model="ir.actions.act_window">
-            <field name="name">Supplier</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">gdm.supplier</field>
-            <field name="view_mode">kanban,tree,form</field>
-            <field name="view_type">form</field>
-            <field name="view_id" ref="gdm_supplier_kanban_view"/>
-            <field name="context">{}</field>
-        </record>
     </data>
 </openerp>
