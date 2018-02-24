@@ -126,12 +126,12 @@
         <record model="ir.actions.act_window" id="action_supplier_tree">
             <field name="name">Product</field>
             <field name="res_model">gdm.supplier</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to define a new Supplier.
                 </p><p>
-                You must define a Supplier for everything.
+                You must define a Supplier for so that you identify the peoples to buy the good from them .
             </p>
             </field>
         </record>
