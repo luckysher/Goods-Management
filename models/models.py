@@ -17,7 +17,7 @@ class goods_supplier(osv.osv):
     _table = 'gdm_supplier'
     _description = 'Goods suppliers'
     _columns = {
-        'name': fields.char('Name', help='Supplier that will supplier the goods', select=True, copy=False),
+        'name': fields.char('Name', help='Supplier that will supplier the goods', required=True, select=True, copy=False),
         'city': fields.char('City', help='Supplier city', select=True),
         'state': fields.char('State', help='Supplier state', select=True),
         'country': fields.char('Country', help='Supplier country', select=True),
@@ -35,6 +35,8 @@ class goods_supplier(osv.osv):
 
       }
 
+    def supplier_address_action(self):
+        return 1
 
 class customer(osv.osv):
     _name = 'gdm.customer'
