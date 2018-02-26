@@ -49,3 +49,7 @@ class customer(osv.osv):
         'ordered_quantity': fields.char('Ordered quantity', help='', select=True),
         'type': fields.char('Order Type', help='', select=True)
     }
+
+class invoice(osv.osv):
+    _name = 'gdm.invoice'
+    _table = 'gdm_invoice'
