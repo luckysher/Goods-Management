@@ -53,13 +53,17 @@ class customer(osv.osv):
 class invoice(osv.osv):
     _name = 'gdm.invoice'
     _table = 'gdm_invoice'
+
     _columns = {
-        'supplier': fields.one2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
+        'supplier': fields.many2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
         'fPosition': fields.selection([('', ''), ('tx', 'Tax'), ('te', 'Tax Exempt')], 'Fiscal Position',
                                         help='Fiscal position', select=True),
         'source_doc': fields.char('Source document', help='', select=True),
         'Supplier Invoice number': fields.char('Invoice number for the supplier', help='', select=True),
         'pays_status': fields.selection([('',''), ('done', 'Done'), ('pending', 'Pending')], 'Payment Status', help='', select=True),
         'invoice_date': fields.date('Invoice date', help="Date of the request"),
-        'due_date': fields.date('Due date', help="Due Date for the payment")
+        'due_date': fields.date('Due date', help="Due Date for the payment"),
+        'state': fields.selection(STATE_SELECTION, 'Status', readonly=True,
+                                  help="The status of the invoice. If the invoice is opened then it is in the draft state and if invoice is not paid"
+                                       "then it will be in pending state other invoice will be in Paid state")
     }
