@@ -61,5 +61,5 @@ class invoice(osv.osv):
         'Supplier Invoice number': fields.char('Invoice number for the supplier', help='', select=True),
         'pays_status': fields.char('Payment Status', help='', select=True),
         'invoice_date': fields.date('Invoice date', help="Date of the request"),
-
+        'due_date': fields.date('Due date', help="Due Date for the payment")
     }
