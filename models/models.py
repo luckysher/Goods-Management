@@ -69,3 +69,6 @@ class invoice(osv.osv):
                                   help="The status of the invoice. If the invoice is opened then it is in the draft state and if invoice is not paid"
                                        "then it will be in pending state other invoice will be in Paid state")
     }
+    _defaults = {
+        'state': 'dft'
+}
