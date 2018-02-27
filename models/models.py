@@ -53,3 +53,9 @@ class customer(osv.osv):
 class invoice(osv.osv):
     _name = 'gdm.invoice'
     _table = 'gdm_invoice'
+    _columns = {
+        'supplier': fields.one2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
+        'fPosition': fields.selection([('', ''), ('tx', 'Tax'), ('te', 'Tax Exempt')], 'Fiscal Position',
+                                        help='Fiscal position', select=True),
+
+    }
