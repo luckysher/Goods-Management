@@ -57,5 +57,7 @@ class invoice(osv.osv):
         'supplier': fields.one2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
         'fPosition': fields.selection([('', ''), ('tx', 'Tax'), ('te', 'Tax Exempt')], 'Fiscal Position',
                                         help='Fiscal position', select=True),
+        'source_doc': fields.char('Source document', help='', select=True),
+        'Supplier Invoice number': fields.char('Invoice number for the supplier', help='', select=True),
 
     }
