@@ -53,7 +53,9 @@ class customer(osv.osv):
 class invoice(osv.osv):
     _name = 'gdm.invoice'
     _table = 'gdm_invoice'
-
+    STATE_SELECTION=[('dft', 'Draft'),
+                     ('pd', 'Pending'),
+                     ('paid', 'Paid')]
     _columns = {
         'supplier': fields.many2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
         'fPosition': fields.selection([('', ''), ('tx', 'Tax'), ('te', 'Tax Exempt')], 'Fiscal Position',
