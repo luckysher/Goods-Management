@@ -140,6 +140,13 @@
             <field name="name">Invoice</field>
             <field name="res_model">gdm.invoice</field>
             <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to generate invoice
+                </p><p>
+                The invoice can have draft, pending and paid modes
+            </p>
+            </field>
         </record>
         <menuitem name="Goods Management" id="gdm_menu"/>
         <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
