@@ -62,7 +62,7 @@ class invoice(osv.osv):
                                         help='Fiscal position', select=True),
         'source_doc': fields.char('Source document', help='', select=True),
         'invoice_num': fields.char('Invoice number for the supplier', help='', select=True, required=True),
-        'pays_status': fields.selection([('',''), ('done', 'Done'), ('pending', 'Pending')], 'Payment Status', help='', select=True),
+        'pay_status': fields.selection([('',''), ('done', 'Done'), ('pending', 'Pending')], 'Payment Status', help='', select=True),
         'invoice_date': fields.date('Invoice date', help="Date of the request"),
         'due_date': fields.date('Due date', help="Due Date for the payment"),
         'state': fields.selection(STATE_SELECTION, 'Status', readonly=True,

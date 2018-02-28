@@ -121,6 +121,8 @@
                         <field name="invoice_num"/>
                         <field name="supplier"/>
                         <field name="fposition"/>
+                        <field name="pay_status"/>
+                        <field name="invoice_date"/>
                     </tree>
                 </field>
             </field>
