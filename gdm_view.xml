@@ -138,6 +138,8 @@
         </record>
         <record model="ir.actions.act_window" id="action_invoice_tree">
             <field name="name">Invoice</field>
+            <field name="res_model">gdm.invoice</field>
+            <field name="view_mode">tree,form</field>
         </record>
         <menuitem name="Goods Management" id="gdm_menu"/>
         <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
