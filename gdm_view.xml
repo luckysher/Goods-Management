@@ -136,6 +136,9 @@
             </p>
             </field>
         </record>
+        <record model="ir.actions.act_window" id="action_invoice_tree">
+            <field name="name">Invoice</field>
+        </record>
         <menuitem name="Goods Management" id="gdm_menu"/>
         <menuitem name="Suppliers" parent="gdm_menu" id="spl_group"/>
         <menuitem name="Supplier"
@@ -145,6 +148,6 @@
         <menuitem name="Products" parent="gdm_menu" id="pdts_menu"/>
         <menuitem name="Product" parent="pdts_menu" id="pdt_menu" action="action_supplier_tree"/>
         <menuitem name="Invoice Control" parent="gdm_menu" id="inc_menu"/>
-        <menuitem name="Invoice" parent="inv_menu" id="in_menu" action="action_supplier_tree"/>
+        <menuitem name="Invoice" parent="inv_menu" id="in_menu" action="action_invoice_tree"/>
     </data>
 </openerp>
