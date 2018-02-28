@@ -124,6 +124,7 @@
                         <field name="pay_status"/>
                         <field name="invoice_date"/>
                         <field name="due_date"/>
+                        <field name="source_doc"/>
                         <field name="state"/>
                     </tree>
                 </field>
