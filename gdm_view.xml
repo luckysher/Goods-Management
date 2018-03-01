@@ -115,7 +115,8 @@
             <field model="ir.ui.view" id="invoice_form_view">
             <field name="name">gdm.invoice.form</field>
             <field name="model">gdm.invoice</field>
-
+            <field name="type">form</field>
+            <field name="arch" type="xml">
                 <form string="Supplier"></form>
             </field>
         </record>
