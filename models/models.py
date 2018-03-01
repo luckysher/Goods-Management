@@ -70,5 +70,5 @@ class invoice(osv.osv):
                                        "then it will be in pending state other invoice will be in Paid state")
     }
     _defaults = {
-        'state': 'dft'
-}
+        'state': 'dft',
+    }
