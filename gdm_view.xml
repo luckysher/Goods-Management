@@ -133,6 +133,8 @@
                             <field name="fPosition"/>
                             <field name="source_doc"/>
                             <field name="pay_status"/>
+                            <field name="invoice_date"/>
+                            <field name="due_date"/>
                         </group>
                     </sheet>
                 </form>
