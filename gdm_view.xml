@@ -132,6 +132,7 @@
                             <field name="supplier"/>
                             <field name="fPosition"/>
                             <field name="source_doc"/>
+                            <field name="pay_status"/>
                         </group>
                     </sheet>
                 </form>
