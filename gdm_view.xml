@@ -130,6 +130,8 @@
                         </div>
                         <group>
                             <field name="supplier"/>
+                            <field name="fPosition"/>
+                            <field name="source_doc"/>
                         </group>
                     </sheet>
                 </form>
