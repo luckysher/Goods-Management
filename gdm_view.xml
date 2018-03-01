@@ -112,6 +112,11 @@
         <!-- Supplier form view end -->
         <!-- Invoice -->
         <record>
+            <field model="ir.ui.view" id="invoice_form_view">
+
+            </field>
+        </record>
+        <record>
             <field model="ir.ui.view" id="invoice_tree_view">
                 <field name="name">gdm.invoice.tree</field>
                 <field name="model">gdm.invoice</field>
