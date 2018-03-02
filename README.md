@@ -18,3 +18,9 @@ How to install the App ? :
   or download master.zip from https://github.com/luckysher/
 
 2. Copy the downloaded app in the addons dir of the odoo server
+
+3. And run the odoo server
+
+4. Go to the http://localhost:8869
+
+5. And you should be able to see the GDM app with "Goods-Management" name
