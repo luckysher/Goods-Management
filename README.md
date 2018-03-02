@@ -24,3 +24,7 @@ How to install the App ? :
 4. Go to the http://localhost:8869
 
 5. And you should be able to see the GDM app with "Goods-Management" name
+
+6. Then install the app
+
+7. And you will see the app in the top menubar
