@@ -21,7 +21,7 @@ How to install the App ? :
 
 3. And run the odoo server
 
-4. Go to the http://localhost:8869
+4. Go to the http://localhost:8069
 
 5. And you should be able to see the GDM app with "Goods-Management" name
 
