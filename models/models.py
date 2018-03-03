@@ -1,4 +1,5 @@
 from openerp.osv import fields, osv
+from openerp import api
 
 class good(osv.osv):
 
@@ -72,3 +73,7 @@ class invoice(osv.osv):
     _defaults = {
         'state': 'dft',
     }
+
+    def invoice_open(self):
+        self.write({"state": "pd"})
+
