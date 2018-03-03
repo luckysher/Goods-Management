@@ -135,7 +135,7 @@
             <field name="arch" type="xml">
                 <form string="Invoice">
                     <header>
-                        <button name="invoice_open" states="dft, pd" string="Validate" class="oe_highlight" />
+                        <button name="invoice_open" states="dft, pd" type="object" string="Validate" class="oe_highlight" />
                         <button name="invoice_cancel" type='action' string='Cancel Invoice' states='dft,paid'/>
                         <field name="state" widget="statusbar" statusbar_visible="dft,pd,paid" statusbar_colors='{"dft":"red","pd":"red","paid":"blue"}' readonly="1"/>
                     </header>
