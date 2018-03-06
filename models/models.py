@@ -66,7 +66,7 @@ class invoice(osv.osv):
         'pay_status': fields.selection([('',''), ('done', 'Done'), ('pending', 'Pending')], 'Payment Status', help='', select=True),
         'invoice_date': fields.date('Invoice date', help="Date of the request"),
         'due_date': fields.date('Due date', help="Due Date for the payment"),
-
+        'invoice_cancel': fields.boolean('Cancel'),
         'state': fields.selection(STATE_SELECTION, 'Status', readonly=True,
                                   help="The status of the invoice. If the invoice is opened then it is in the draft state and if invoice is not paid"
                                        "then it will be in pending state other invoice will be in Paid state")
@@ -79,3 +79,5 @@ class invoice(osv.osv):
     def invoice_open(self):
         self.write({"state": "pd"})
 
+    def invoice_cancelled(self):
+        self.write({"invoice_cancel": True})
