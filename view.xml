@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_invoice_cancel" model="ir.ui.view">
+            <field name="name">gdm.invoice.form</field>
+            <field name="model">gdm.invoice</field>
+
+        </record>
+
+
+
+    </data>
+</openerp>
