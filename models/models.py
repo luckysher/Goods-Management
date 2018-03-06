@@ -58,7 +58,7 @@ class invoice(osv.osv):
                      ('pd', 'Pending'),
                      ('paid', 'Paid')]
     _columns = {
-        'supplier': fields.many2one('gdm.supplier', 'name', help='Supplier Name', copy=True),
+        'supplier': fields.many2one('gdm.supplier', 'Name', help='Supplier Name', copy=True),
         'fPosition': fields.selection([('', ''), ('tx', 'Tax'), ('te', 'Tax Exempt')], 'Fiscal Position',
                                         help='Fiscal position', select=True),
         'source_doc': fields.char('Source document', help='', select=True),
@@ -66,12 +66,14 @@ class invoice(osv.osv):
         'pay_status': fields.selection([('',''), ('done', 'Done'), ('pending', 'Pending')], 'Payment Status', help='', select=True),
         'invoice_date': fields.date('Invoice date', help="Date of the request"),
         'due_date': fields.date('Due date', help="Due Date for the payment"),
+
         'state': fields.selection(STATE_SELECTION, 'Status', readonly=True,
                                   help="The status of the invoice. If the invoice is opened then it is in the draft state and if invoice is not paid"
                                        "then it will be in pending state other invoice will be in Paid state")
     }
     _defaults = {
         'state': 'dft',
+        'invoice_cancel': False,
     }
 
     def invoice_open(self):
