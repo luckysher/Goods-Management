@@ -4,9 +4,12 @@
         <record id="view_invoice_cancel" model="ir.ui.view">
             <field name="name">gdm.invoice.form</field>
             <field name="model">gdm.invoice</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Cancellation">
 
+               </form>
+            </field>
         </record>
-
 
 
     </data>
