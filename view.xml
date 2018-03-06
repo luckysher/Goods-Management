@@ -6,10 +6,16 @@
             <field name="model">gdm.invoice</field>
             <field name="arch" type="xml">
                 <form string="Invoice Cancellation">
+                    <header></header>
+                    <group>
+                        <field name="invoice_num"/>
+                        <field name="supplier"/>
+                    </group>
 
-               </form>
+                </form>
             </field>
         </record>
+
 
 
     </data>
