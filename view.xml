@@ -15,7 +15,9 @@
                         <field name="invoice_date"/>
                         <field name="due_date"/>
                     </group>
-
+                    <footer>
+                        <button string='Cancel' class="oe_highlight"/>
+                    </footer>
                 </form>
             </field>
         </record>
