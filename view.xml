@@ -21,6 +21,9 @@
                 </form>
             </field>
         </record>
+        <record id="action_invoice_cancel" model="ir.actions.act_window">
+
+        </record>
 
 
     </data>
