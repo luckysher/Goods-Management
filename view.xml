@@ -24,6 +24,8 @@
         <record id="action_invoice_cancel" model="ir.actions.act_window">
             <field name="name">Cancel Invoice</field>
             <field name="res_model">gdm.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_invoice_cancel"/>
             <field name="target">new</field>
         </record>
