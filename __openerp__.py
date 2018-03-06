@@ -13,6 +13,7 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'view.xml',
         'gdm_view.xml',
     ],
     'demo': [
